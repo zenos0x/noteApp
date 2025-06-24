@@ -1,0 +1,123 @@
+.modalWrapper {
+    width: 40%;
+    height: 50%;
+    background-color: #d79ffc;
+    border-radius: 1em;
+    padding: 2em 2em 1em;
+    overflow: scroll;
+
+
+    .showmodalContainer {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .closeIconWrapper {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+            position: sticky;
+            top: 0;
+
+            .closeIcon {
+                width: 3em;
+            }
+        }
+
+        .contentWrapper {
+            img {
+                max-width: 100%;
+            }
+        }
+
+
+    }
+
+    .addorEditContainer {
+        textarea {
+            width: 98%;
+            height: 20em;
+        }
+        h1{
+            margin: 0 0 0.5em;
+        }
+
+        .actionContainer {
+            padding-top: 1.3em;
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            gap: .5em;
+
+            .uploadIcon {
+                width: 2em;
+            }
+
+            button {
+                border: none;
+                color: white;
+                padding: .5em .7em;
+                border-radius: .5em;
+            }
+
+            .cancelBtn {
+                background-color: rgba(255, 0, 0, 0.932);
+            }
+
+            .confirmBtn {
+                background-color: rgb(0, 132, 255);
+            }
+        }
+
+        .uploadedImgContainer {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            width: 100%;
+            overflow-y: scroll;
+            padding-top: 2em;
+
+            .imageWrapper {
+                position: relative;
+
+                .uploadedImg {
+                    width: 2.5em;
+                }
+
+                .deleteIcon {
+                    position: absolute;
+                    width: .7em;
+                    top: 0;
+                    right: -.7em;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+}
+
+.modalWrapper::-webkit-scrollbar {
+    width: .5em;
+    margin: 1em;
+}
+
+.modalWrapper::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.uploadedImgContainer::-webkit-scrollbar {
+    height: .4em;
+    margin: 1em;
+}
+
+.uploadedImgContainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
